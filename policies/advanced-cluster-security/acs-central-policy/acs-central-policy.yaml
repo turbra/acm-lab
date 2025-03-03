@@ -1,15 +1,72 @@
-apiVersion: apps.open-cluster-management.io/v1
-kind: PlacementRule
+apiVersion: policy.open-cluster-management.io/v1
+kind: Policy
+metadata:
+  name: advanced-cluster-security-operator
+  namespace: openshift-operators
+  annotations:
+    policy.open-cluster-management.io/categories: CM Configuration Management
+    policy.open-cluster-management.io/controls: CM-2 Baseline Configuration
+    policy.open-cluster-management.io/standards: NIST SP 800-53
+spec:
+  disabled: false
+  policy-templates:
+    - objectDefinition:
+        apiVersion: policy.open-cluster-management.io/v1beta1
+        kind: OperatorPolicy
+        metadata:
+          name: install-operator
+        spec:
+          complianceType: musthave
+          remediationAction: enforce
+          severity: critical
+          subscription:
+            name: rhacs-operator
+            namespace: openshift-operators
+            channel: stable
+            source: redhat-operators
+            sourceNamespace: openshift-marketplace
+            startingCSV: rhacs-operator.v4.6.2
+          upgradeApproval: Automatic
+          versions:
+  remediationAction: enforce
+status:
+  compliant: NonCompliant
+  placement:
+    - placement: advanced-cluster-security-operator-placement
+      placementBinding: advanced-cluster-security-operator-placement
+---
+apiVersion: cluster.open-cluster-management.io/v1beta1
+kind: Placement
 metadata:
   name: advanced-cluster-security-operator-placement
   namespace: openshift-operators
 spec:
-  clusterConditions:
-    - status: "True"
-      type: ManagedClusterConditionAvailable
-  clusterSelector:
-    matchExpressions:
-      - key: hub-cluster
-        operator: In
-        values:
-          - "true"
+  clusterSets:
+    - hub-cluster
+  predicates:
+    - requiredClusterSelector:
+        labelSelector:
+          matchExpressions:
+            - key: env
+              operator: In
+              values:
+                - hub
+  tolerations:
+    - key: cluster.open-cluster-management.io/unreachable
+      operator: Exists
+    - key: cluster.open-cluster-management.io/unavailable
+      operator: Exists
+---
+apiVersion: policy.open-cluster-management.io/v1
+kind: PlacementBinding
+metadata:
+  name: advanced-cluster-security-operator-placement
+  namespace: openshift-operators
+placementRef:
+  name: advanced-cluster-security-operator-placement
+  apiGroup: cluster.open-cluster-management.io
+  kind: Placement
+subjects:
+  - name: advanced-cluster-security-operator
+    apiGroup: policy.open-cluster-management.io
+    kind: Policy
