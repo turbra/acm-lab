@@ -21,7 +21,7 @@ spec:
           severity: critical
           subscription:
             name: rhacs-operator
-            namespace: openshift-operators
+            namespace: rhacs-operator
             channel: stable
             source: redhat-operators
             sourceNamespace: openshift-marketplace
