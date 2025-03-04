@@ -5,4 +5,3 @@ metadata:
     openshift.io/display-name: Red Hat Advanced Cluster Security Operator
     argocd.argoproj.io/sync-wave: "0"
   name: rhacs-operator
-  namespace: openshift-operators
