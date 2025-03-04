@@ -44,23 +44,10 @@ spec:
       persistence:
         persistentVolumeClaim:
           claimName: scanner-v4-db
-    #indexer:
-    #  scaling:
-    #    autoScaling: Enabled
-    #    maxReplicas: 5
-    #    minReplicas: 2
-    #    replicas: 3
-    #matcher:
-    #  scaling:
-    #    autoScaling: Enabled
-    #    maxReplicas: 5
-    #    minReplicas: 2
-    #    replicas: 3
-    #scannerComponent: Default
   scanner:
     analyzer:
       scaling:
         autoScaling: Enabled
-        maxReplicas: 1
+        maxReplicas: 3
         minReplicas: 1
-        replicas: 1
+        replicas: 2
