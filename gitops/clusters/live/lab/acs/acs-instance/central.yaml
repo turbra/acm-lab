@@ -28,9 +28,6 @@ spec:
       enabled: true
     db:
       isEnabled: Default
-      connectionPoolSize:
-        maxConnections: 90
-        minConnections: 10
       persistence:
         persistentVolumeClaim:
           claimName: central-db
