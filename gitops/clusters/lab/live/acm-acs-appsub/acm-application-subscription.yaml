@@ -47,38 +47,3 @@ spec:
     placementRef:
       kind: PlacementRule
       name: acs-install-policies-placement
----
-apiVersion: apps.open-cluster-management.io/v1
-kind: PlacementRule
-metadata:
-  labels:
-    app: acs-install-policies
-  name: acs-install-policies-placement
-  namespace: acs-install-policies
-spec:
-  clusterSelector:
-    matchLabels:
-      name: local-cluster
----
-apiVersion: apps.open-cluster-management.io/v1
-kind: PlacementRule
-metadata:
-  name: placement-openshift-acm-hub
-  namespace: acm-install-policies
-spec:
-  clusterSelector:
-    matchLabels:
-      name: local-cluster
----
-apiVersion: apps.open-cluster-management.io/v1
-kind: PlacementRule
-metadata:
-  name: placement-openshift-acm-managed-clusters
-  namespace: acm-install-policies
-spec:
-  clusterSelector:
-    matchExpressions:
-      - key: name
-        operator: NotIn
-        values:
-          - local-cluster
