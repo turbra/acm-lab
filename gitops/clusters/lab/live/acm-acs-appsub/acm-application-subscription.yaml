@@ -23,12 +23,12 @@ apiVersion: apps.open-cluster-management.io/v1
 kind: Channel
 metadata:
   annotations:
-    apps.open-cluster-management.io/reconcile-rate: mediu
+    apps.open-cluster-management.io/reconcile-rate: medium
   name: acs-install-policies-channel
   namespace: acs-install-policies
 spec:
   type: Git
-  pathname: https://github.com/turbra/acm-install-acs.git
+  pathname: https://github.com/skylarscaling/acm-install-acs.git
 ---
 apiVersion: apps.open-cluster-management.io/v1
 kind: Subscription
@@ -47,3 +47,15 @@ spec:
     placementRef:
       kind: PlacementRule
       name: acs-install-policies-placement
+---
+apiVersion: apps.open-cluster-management.io/v1
+kind: PlacementRule
+metadata:
+  labels:
+    app: acs-install-policies
+  name: acs-install-policies-placement
+  namespace: acs-install-policies
+spec:
+  clusterSelector:
+    matchLabels:
+      name: local-cluster
