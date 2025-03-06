@@ -7,7 +7,7 @@ apiVersion: app.k8s.io/v1beta1
 kind: Application
 metadata:
   name: acs-install-policies
-  namespace: acs-install-policies
+  namespace: acm-install-policies
 spec:
   componentKinds:
     - group: apps.open-cluster-management.io
@@ -25,7 +25,7 @@ metadata:
   annotations:
     apps.open-cluster-management.io/reconcile-rate: medium
   name: acs-install-policies-channel
-  namespace: acs-install-policies
+  namespace: acm-install-policies
 spec:
   type: Git
   pathname: https://github.com/turbra/acm-install-acs.git
@@ -40,7 +40,7 @@ metadata:
   labels:
     app: acs-install-policies
   name: acs-install-policies-subscription
-  namespace: acs-install-policies
+  namespace: acm-install-policies
 spec:
   channel: acs-install-policies/acs-install-policies-channel
   placement:
@@ -54,7 +54,7 @@ metadata:
   labels:
     app: acs-install-policies
   name: acs-install-policies-placement
-  namespace: acs-install-policies
+  namespace: acm-install-policies
 spec:
   clusterSelector:
     matchLabels:
