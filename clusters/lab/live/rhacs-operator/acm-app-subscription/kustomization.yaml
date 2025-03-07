@@ -3,3 +3,4 @@ kind: Kustomization
 
 resources:
 - acm-app-subscription.yaml
+- rbac.yaml
