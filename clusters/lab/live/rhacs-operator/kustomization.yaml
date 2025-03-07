@@ -3,5 +3,5 @@ kind: Kustomization
 
 resources:
 - acm-app-subscription
-- policies
+#- policies
 - rbac
