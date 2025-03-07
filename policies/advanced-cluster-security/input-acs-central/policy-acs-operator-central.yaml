@@ -72,8 +72,8 @@ spec:
         - key: node-role.kubernetes.io/infra
           effect: NoSchedule
       scaling:
-        autoScaling: Enabled
-        maxReplicas: 5
-        minReplicas: 2
+        autoScaling: Disabled
+        #maxReplicas: 5
+        #minReplicas: 2
         replicas: 2
     scannerComponent: Enabled
