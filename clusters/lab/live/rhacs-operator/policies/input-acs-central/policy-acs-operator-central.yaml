@@ -1,12 +1,12 @@
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: stackrox
----
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: rhacs-operator
+#apiVersion: v1
+#kind: Namespace
+#metadata:
+#  name: stackrox
+#---
+#apiVersion: v1
+#kind: Namespace
+#metadata:
+#  name: rhacs-operator
 ---
 apiVersion: operators.coreos.com/v1
 kind: OperatorGroup
