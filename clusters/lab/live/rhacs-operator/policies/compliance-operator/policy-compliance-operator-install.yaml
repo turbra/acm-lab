@@ -26,6 +26,7 @@ spec:
 apiVersion: operators.coreos.com/v1alpha1
 kind: ClusterServiceVersion
 metadata:
+  name: compliance-operator.v1.6.1
   namespace: openshift-compliance
 spec:
   displayName: Compliance Operator
