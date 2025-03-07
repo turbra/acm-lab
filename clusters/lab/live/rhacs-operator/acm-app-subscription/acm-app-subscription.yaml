@@ -41,7 +41,7 @@ kind: Subscription
 metadata:
   annotations:
     apps.open-cluster-management.io/git-branch: policies
-    apps.open-cluster-management.io/git-path: policies/advanced-cluster-security
+    apps.open-cluster-management.io/git-path: clusters/lab/live/rhacs-operator/policies
     apps.open-cluster-management.io/reconcile-option: merge
   labels:
     app: acs-install-policies
