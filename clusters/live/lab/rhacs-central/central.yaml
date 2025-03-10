@@ -32,6 +32,13 @@ spec:
     telemetry:
       enabled: true
     db:
+      resources:
+        limits:
+          cpu: "1"
+          memory: "2Gi"
+        requests:
+          cpu: "500m"
+          memory: "1Gi"
       nodeSelector:
         node-role.kubernetes.io/infra: ""
       tolerations:
