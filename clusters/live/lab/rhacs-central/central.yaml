@@ -14,6 +14,11 @@ spec:
   network:
     policies: Enabled
   central:
+    nodeSelector:
+      node-role.kubernetes.io/infra: ""
+    tolerations:
+      - key: node-role.kubernetes.io/infra
+        effect: NoSchedule
     notifierSecretsEncryption:
       enabled: false
     exposure:
@@ -27,6 +32,11 @@ spec:
     telemetry:
       enabled: true
     db:
+      nodeSelector:
+        node-role.kubernetes.io/infra: ""
+      tolerations:
+        - key: node-role.kubernetes.io/infra
+          effect: NoSchedule
       isEnabled: Default
       persistence:
         persistentVolumeClaim:
@@ -38,11 +48,21 @@ spec:
     connectivityPolicy: Online
   scannerV4:
     db:
+      nodeSelector:
+        node-role.kubernetes.io/infra: ""
+      tolerations:
+        - key: node-role.kubernetes.io/infra
+          effect: NoSchedule
       persistence:
         persistentVolumeClaim:
           claimName: scanner-v4-db
   scanner:
     analyzer:
+      nodeSelector:
+        node-role.kubernetes.io/infra: ""
+      tolerations:
+        - key: node-role.kubernetes.io/infra
+          effect: NoSchedule
       scaling:
         autoScaling: Enabled
         maxReplicas: 3
