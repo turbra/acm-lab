@@ -34,11 +34,11 @@ spec:
     db:
       resources:
         limits:
-          cpu: "1"
-          memory: "2Gi"
+          cpu: "6"
+          memory: "8Gi"
         requests:
-          cpu: "500m"
-          memory: "1Gi"
+          cpu: "2"
+          memory: "4Gi"
       nodeSelector:
         node-role.kubernetes.io/infra: ""
       tolerations:
