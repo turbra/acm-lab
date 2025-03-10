@@ -31,14 +31,6 @@ spec:
         enabled: true
     telemetry:
       enabled: true
-    sensor:
-      resources:
-        limits:
-          cpu: "2"
-          memory: "8Gi"
-        requests:
-          cpu: "4"
-          memory: "4Gi" 
     db:
       resources:
         limits:
