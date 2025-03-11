@@ -38,10 +38,9 @@ policySets:
   - description: The Advanced Cluster Security components to setup the hub for securing each managed cluster.
     name: acs-sensors-hub-info
     placement:
-      labelSelector:
-        matchExpressions: '[{"key": "local-cluster", "operator": "In", "values": ["true"]}]'
+      placementRulePath: hub-placement.yaml
+
   - description: The Advanced Cluster Security components distributed to all OpenShift managed clusters to secure the clusters.
     name: acs-sensor-clusters
     placement:
-      labelSelector:
-        matchExpressions: "[{\"key\": \"spoke-gitops\", \"operator\": \"In\", \"values\": [\"true\"]}]"
+      placementRulePath: clusters-placement.yaml
