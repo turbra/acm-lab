@@ -1,14 +1,12 @@
-
-# WIP
-Based off of [A collection of policy examples for Open Cluster Management.]( https://github.com/open-cluster-management-io/policy-collection/tree/main/policygenerator/policy-sets/community/acs-secure)
-
 The ACS PolicySet for Secured Clusters contains two PolicySets that will be deployed. The PolicySets install RHACS Secured Clusters onto all OpenShift clusters that are managed by RHACM except for the RHACM hub cluster. The RHACS Secured Cluster component is deployed to the RHACM hub via an ArgoCD applicationset which will pickup the `rhacs-operator` and `rhacs-central` directories.
 
-Prior to applying the PolicySet, perform these steps:
-1. Enable alpha plugins and the ClusterRoleBinding for **openshift-gitops-policy-admin**
- ```
-oc apply -f https://raw.githubusercontent.com/turbra/acm-install-acs/refs/heads/generator/cluster-role.yaml
+Based off of [A collection of policy examples for Open Cluster Management.]( https://github.com/open-cluster-management-io/policy-collection/tree/main/policygenerator/policy-sets/community/acs-secure)
 
+---
+
+Prior to applying the PolicySet, perform these steps:
+1. OpenShift GitOps must be configured to provide the `--enable-alpha-plugins` flag when you run Kustomize. Run the following command to configure OpenShift GitOps:
+ ```
 oc -n openshift-gitops patch argocd openshift-gitops --type merge --patch "$(curl https://raw.githubusercontent.com/turbra/acm-install-acs/refs/heads/generator/argocd-patch.yaml)"
 ```
 2. Policies are installed to the rhacm-hub namespace. ArgoCD will apply `mcsbinding.yaml` accordingly.   
