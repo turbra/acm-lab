@@ -9,7 +9,8 @@ Prior to applying the PolicySet, perform these steps:
  ```
 oc -n openshift-gitops patch argocd openshift-gitops --type merge --patch "$(curl https://raw.githubusercontent.com/turbra/acm/refs/heads/2fb02ea/clusters/live/lab/rhacs-policies/patch/argocd-patch.yaml)"
 ```
-2. Policies are installed to the rhacm-hub namespace. ArgoCD will apply `mcsbinding.yaml` accordingly.   
+2. Policies are installed to the rhacm-hub namespace.
+    - ArgoCD will apply `mcsbinding.yaml` accordingly.   
 
 ---
 
