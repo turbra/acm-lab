@@ -9,4 +9,4 @@ spec:
       - key: spoke-gitops
         operator: In
         values:
-          - true
+          - "true"
