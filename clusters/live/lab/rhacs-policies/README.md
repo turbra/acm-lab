@@ -1,6 +1,12 @@
 
 # WIP
 Based off of [A collection of policy examples for Open Cluster Management.]( https://github.com/open-cluster-management-io/policy-collection/tree/main/policygenerator/policy-sets/community/acs-secure)
+
+> 💡Note: rhacm-hub namespace is required
+ ```
+oc new-project rhacm-hub
+```
+
 > 💡Note: labels are required
  ```
 oc label node <node-name> node-role.kubernetes.io/infra=""
