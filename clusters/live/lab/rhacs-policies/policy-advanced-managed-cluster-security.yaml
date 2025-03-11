@@ -28,7 +28,7 @@ spec:
   sourceNamespace: openshift-marketplace
 ---
 apiVersion: v1
-data: '{{hub copySecretData "policies" "admission-control-tls" hub}}'
+data: '{{hub copySecretData "rhacm-hub" "admission-control-tls" hub}}'
 kind: Secret
 metadata:
   name: admission-control-tls
@@ -36,7 +36,7 @@ metadata:
 type: Opaque
 ---
 apiVersion: v1
-data: '{{hub copySecretData "policies" "collector-tls" hub}}'
+data: '{{hub copySecretData "rhacm-hub" "collector-tls" hub}}'
 kind: Secret
 metadata:
   name: collector-tls
@@ -44,7 +44,7 @@ metadata:
 type: Opaque
 ---
 apiVersion: v1
-data: '{{hub copySecretData "policies" "sensor-tls" hub}}'
+data: '{{hub copySecretData "rhacm-hub" "sensor-tls" hub}}'
 kind: Secret
 metadata:
   name: sensor-tls
