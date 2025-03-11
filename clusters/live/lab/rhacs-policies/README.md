@@ -3,8 +3,7 @@
 Based off of [A collection of policy examples for Open Cluster Management.]( https://github.com/open-cluster-management-io/policy-collection/tree/main/policygenerator/policy-sets/community/acs-secure)
 > 💡Note: labels are required
  ```
-oc label node<node-name> node-role.kubernetes.io/infra=""
-oc label managedcluster local-cluster app=acs-install-policies
+oc label node <node-name> node-role.kubernetes.io/infra=""
 ```
 
 > 💡Note: enable alpha plugins and CRB for openshift-gitops-policy-admin
