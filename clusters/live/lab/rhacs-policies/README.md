@@ -7,9 +7,11 @@ Based off of [A collection of policy examples for Open Cluster Management.]( htt
 oc new-project rhacm-hub
 ```
 
-> 💡Note: labels are required
+> 💡Note: node labels are required
  ```
 oc label node <node-name> node-role.kubernetes.io/infra=""
+oc label node <node-name> spoke-gitops=true
+
 ```
 
 > 💡Note: enable alpha plugins and CRB for openshift-gitops-policy-admin
