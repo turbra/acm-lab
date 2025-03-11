@@ -21,19 +21,19 @@ Based off of [A collection of policy examples for Open Cluster Management.]( htt
    - The output of the PolicyGenerator (via Kustomize) is a complete set of policies, placements, and bindings that ACM then applies to your clusters.
    - These policies ensure that your Advanced Cluster Security configuration is enforced according to your Git‑declared definitions.
 
-> 💡 **Note:** The **rhacm-hub** namespace is required 
+> 💡 The **rhacm-hub** namespace is required 
  ```
 oc new-project rhacm-hub
 ```
 
-> 💡 **Note:** Node labels are required
+> 💡 **Node labels** are required
  ```
 oc label node <node-name> node-role.kubernetes.io/infra=""
-oc label node <node-name> spoke-gitops=true
 
+oc label node <node-name> spoke-gitops=true
 ```
 
-> 💡 **Note:** Enable alpha plugins and the ClusterRoleBinding for **openshift-gitops-policy-admin**
+> 💡 Enable alpha plugins and the ClusterRoleBinding for **openshift-gitops-policy-admin**
  ```
 oc apply -f https://raw.githubusercontent.com/turbra/acm-install-acs/refs/heads/generator/cluster-role.yaml
 
