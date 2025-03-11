@@ -7,7 +7,7 @@ Based off of [A collection of policy examples for Open Cluster Management.]( htt
 Prior to applying the PolicySet, perform these steps:
 1. OpenShift GitOps must be configured to provide the `--enable-alpha-plugins` flag when you run Kustomize. Run the following command to configure OpenShift GitOps:
  ```
-oc -n openshift-gitops patch argocd openshift-gitops --type merge --patch "$(curl https://raw.githubusercontent.com/turbra/acm-install-acs/refs/heads/generator/argocd-patch.yaml)"
+oc -n openshift-gitops patch argocd openshift-gitops --type merge --patch "$(curl https://raw.githubusercontent.com/turbra/acm/refs/heads/2fb02ea/clusters/live/lab/rhacs-policies/patch/argocd-patch.yaml)"
 ```
 2. Policies are installed to the rhacm-hub namespace. ArgoCD will apply `mcsbinding.yaml` accordingly.   
 
