@@ -1,5 +1,16 @@
 This repository provides a GitOps-based deployment for Red Hat Advanced Cluster Security (RHACS) using Argo CD. It can be used for both testing in a lab environment and for existing ACM deployments with managed clusters. The repository deploys several critical components to the hub cluster and uses ACM Policy Sets to distribute security policies to all managed OpenShift clusters.
 
+## Assumptions:
+- Infra node labels for RHACS-Central
+  - `oc label node <node_name> node-role.kubernetes.io/infra=""`
+- ArgoCD ServiceAccount `openshift-gitops-argocd-application-controller` has `ClusterRole` of `cluster-admin`
+  - `oc adm policy add-cluster-role-to-user cluster-admin -z openshift-gitops-argocd-application-controller -n openshift-gitops`
+- Namespace `rhacm-hub` exists
+  - `oc new-project rhacm-hub`
+- Managed Cluster(s) have a label of `spoke-gitops=true`
+
+---
+
 ## Key Components Deployed via Argo CD ApplicationSet
 
 The Argo CD ApplicationSet in this repository generates Applications that deploy the following resources on the **hub cluster**:
