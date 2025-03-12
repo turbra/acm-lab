@@ -4,5 +4,5 @@ resources:
   - mcsbinding.yaml
 generators:
   - ./policyGenerator.yaml
-commonlabels:
+commonLabels:
   open-cluster-management.io/policy-set: acs-sensors
