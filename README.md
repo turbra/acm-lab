@@ -3,6 +3,7 @@ This repository provides a GitOps-based deployment for Red Hat Advanced Cluster 
 ## Assumptions:
 - Infra node labels for RHACS-Central
   - `oc label node <node_name> node-role.kubernetes.io/infra=""`
+- OpenShift GitOps Operator has been installed
 - ArgoCD ServiceAccount `openshift-gitops-argocd-application-controller` has `ClusterRole` of `cluster-admin`
   - `oc adm policy add-cluster-role-to-user cluster-admin -z openshift-gitops-argocd-application-controller -n openshift-gitops`
 - Namespace `rhacm-hub` exists
