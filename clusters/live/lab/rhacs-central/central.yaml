@@ -14,11 +14,11 @@ spec:
   network:
     policies: Enabled
   central:
-    nodeSelector:
-      node-role.kubernetes.io/infra: ""
-    tolerations:
-      - key: node-role.kubernetes.io/infra
-        effect: NoSchedule
+    #nodeSelector:
+    #  node-role.kubernetes.io/infra: ""
+    #tolerations:
+    #  - key: node-role.kubernetes.io/infra
+    #    effect: NoSchedule
     notifierSecretsEncryption:
       enabled: false
     exposure:
