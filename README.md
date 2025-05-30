@@ -11,7 +11,7 @@ This repository provides a GitOps-based deployment for Red Hat Advanced Cluster 
 - Managed Cluster(s) have a label of `spoke-gitops=true`
 - Prior to applying the PolicySet, perform these steps:
   - OpenShift GitOps must be configured to provide the `--enable-alpha-plugins` flag when you run Kustomize. Run the following command to configure OpenShift GitOps:
- `oc -n openshift-gitops patch argocd openshift-gitops --type merge --patch "$(curl https://raw.githubusercontent.com/turbra/acm/refs/heads/main/clusters/live/lab/rhacs-policies/patch/argocd-patch.yaml)"
+ `oc -n openshift-gitops patch argocd openshift-gitops --type merge --patch "$(curl https://raw.githubusercontent.com/turbra/acm-lab/refs/heads/main/clusters/live/lab/rhacs-policies/patch/argocd-patch.yaml)"
 `
 
 ---
