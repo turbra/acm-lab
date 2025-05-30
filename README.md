@@ -86,7 +86,7 @@ spec:
   goTemplateOptions: ["missingkey=error"]
   generators:
   - git:
-      repoURL: https://github.com/turbra/acm.git
+      repoURL: https://github.com/turbra/acm-lab.git
       revision: main
       directories:
       - path: clusters/live/lab/*
@@ -98,7 +98,7 @@ spec:
     spec:
       project: default
       source:
-        repoURL: https://github.com/turbra/acm.git
+        repoURL: https://github.com/turbra/acm-lab.git
         targetRevision: main
         path: '{{.path.path}}'
       destination:
