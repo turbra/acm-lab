@@ -34,16 +34,16 @@ spec:
     db:
       resources:
         limits:
-          cpu: "6"
-          memory: "8Gi"
-        requests:
-          cpu: "2"
+          cpu: "1"
           memory: "4Gi"
-      nodeSelector:
-        node-role.kubernetes.io/infra: ""
-      tolerations:
-        - key: node-role.kubernetes.io/infra
-          effect: NoSchedule
+        requests:
+          cpu: "500m"
+          memory: "2Gi"
+      #nodeSelector:
+      #  node-role.kubernetes.io/infra: ""
+      #tolerations:
+      #  - key: node-role.kubernetes.io/infra
+      #    effect: NoSchedule
       isEnabled: Default
       persistence:
         persistentVolumeClaim:
@@ -55,23 +55,23 @@ spec:
     connectivityPolicy: Online
   scannerV4:
     db:
-      nodeSelector:
-        node-role.kubernetes.io/infra: ""
-      tolerations:
-        - key: node-role.kubernetes.io/infra
-          effect: NoSchedule
+      #nodeSelector:
+      #  node-role.kubernetes.io/infra: ""
+      #tolerations:
+      #  - key: node-role.kubernetes.io/infra
+      #    effect: NoSchedule
       persistence:
         persistentVolumeClaim:
           claimName: scanner-v4-db
   scanner:
     analyzer:
-      nodeSelector:
-        node-role.kubernetes.io/infra: ""
-      tolerations:
-        - key: node-role.kubernetes.io/infra
-          effect: NoSchedule
+      #nodeSelector:
+      #  node-role.kubernetes.io/infra: ""
+      #tolerations:
+      #  - key: node-role.kubernetes.io/infra
+      #    effect: NoSchedule
       scaling:
-        autoScaling: Enabled
+        autoScaling: Disabled
         maxReplicas: 3
         minReplicas: 1
         replicas: 2
