@@ -5,7 +5,7 @@ metadata:
 spec:
   applicationMenu:
     imageURL: >-
-      https://central-stackrox.apps.virt-box.turbra.lab/static/assets/redhat.svg
+      https://central-stackrox.apps.virt-box.turbra.lab/static/media/RHACS-Logo.d3245b7c3ef3347be06f35cae343c70a.svg
     section: OpenShift ACS
   href: 'https://central-stackrox.apps.virt-box.turbra.lab'
   location: ApplicationMenu
