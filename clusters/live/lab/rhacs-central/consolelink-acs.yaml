@@ -1,0 +1,12 @@
+apiVersion: console.openshift.io/v1
+kind: ConsoleLink
+metadata:
+  name: acs
+spec:
+  applicationMenu:
+    imageURL: >-
+      https://central-stackrox.apps.virt-box.turbra.lab/static/assets/redhat.svg
+    section: OpenShift ACS
+  href: 'https://central-stackrox.apps.virt-box.turbra.lab'
+  location: ApplicationMenu
+  text: Advanced Cluster Security
