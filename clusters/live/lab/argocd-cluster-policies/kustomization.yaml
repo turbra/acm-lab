@@ -1,7 +1,6 @@
 ---
 resources:
   - namespace.yaml
-  - operatorgroup.yaml
   - placementbinding.yaml
   - placementrule.yaml
   - subscription.yaml
