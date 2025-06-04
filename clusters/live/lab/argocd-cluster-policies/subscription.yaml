@@ -6,8 +6,8 @@ metadata:
   labels:
     app: managed-argocd
   annotations:
-    apps.open-cluster-management.io/github-path: rhacm-managed-argocd/argocd-cluster/policies
-    apps.open-cluster-management.io/github-branch: main
+    apps.open-cluster-management.io/github-path: clusters/live/lab/argocd-cluster-policies
+    apps.open-cluster-management.io/github-branch: lab
 spec:
   channel: managed-argocd/managed-argocd
   placement:
