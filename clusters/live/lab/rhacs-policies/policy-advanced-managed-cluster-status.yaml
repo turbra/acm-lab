@@ -3,6 +3,8 @@ kind: Deployment
 metadata:
   name: sensor
   namespace: stackrox
+  spec:
+    replicas: 1
 status:
   conditions:
     - status: "True"
