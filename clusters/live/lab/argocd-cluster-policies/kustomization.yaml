@@ -1,7 +1,7 @@
 ---
 resources:
-  #- namespace.yaml
-  #- channel.yaml
-  #- subscription.yaml
-  #- application.yaml
+  - namespace.yaml
+  - channel.yaml
+  - subscription.yaml
+  - application.yaml
   #- managed-argocd.yaml
