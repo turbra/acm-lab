@@ -1,7 +1,9 @@
 ---
 resources:
-  - namespace.yaml
-  - channel.yaml
+  #- namespace.yaml
+  - operatorgroup.yaml
+  - placementbinding.yaml
+  - placementrule.yaml
   - subscription.yaml
   - application.yaml
-  #- managed-argocd.yaml
+  - managed-argocd.yaml

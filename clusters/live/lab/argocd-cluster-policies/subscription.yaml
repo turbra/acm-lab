@@ -1,14 +1,11 @@
-apiVersion: apps.open-cluster-management.io/v1
+apiVersion: operators.coreos.com/v1alpha1
 kind: Subscription
 metadata:
-  name: managed-argocd-subscription
-  namespace: managed-argocd
-  labels:
-    app: managed-argocd
-  annotations:
-    apps.open-cluster-management.io/github-path: clusters/live/lab/argocd-cluster-policies
-    apps.open-cluster-management.io/github-branch: lab
+  name: openshift-gitops-operator
+  namespace: openshift-gitops
 spec:
-  channel: managed-argocd/managed-argocd
-  placement:
-    local: true
+  channel: stable
+  name: openshift-gitops-operator
+  source: redhat-operators
+  sourceNamespace: openshift-marketplace
+  installPlanApproval: Automatic

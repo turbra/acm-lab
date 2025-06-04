@@ -1,9 +1,0 @@
----
-apiVersion: apps.open-cluster-management.io/v1
-kind: Channel
-metadata:
-  name: managed-argocd
-  namespace: managed-argocd
-spec:
-  type: GitHub
-  pathname: https://github.com/turbra/acm-lab.git
