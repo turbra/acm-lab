@@ -72,6 +72,6 @@ spec:
       #    effect: NoSchedule
       scaling:
         autoScaling: Disabled
-        maxReplicas: 3
-        minReplicas: 1
-        replicas: 2
+        #maxReplicas: 3
+        #minReplicas: 1
+        replicas: 1
