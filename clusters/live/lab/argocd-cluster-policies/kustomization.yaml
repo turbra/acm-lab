@@ -4,3 +4,4 @@ resources:
   - channel.yaml
   - subscription.yaml
   - application.yaml
+  - managed-argocd.yaml
