@@ -2,7 +2,7 @@ apiVersion: policy.open-cluster-management.io/v1
 kind: PlacementBinding
 metadata:
   name: bind-gitops-policy
-  namespace: policies
+  namespace: managed-argocd
 placementRef:
   name: clusters-with-argocd
   kind: PlacementRule
