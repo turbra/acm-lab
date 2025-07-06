@@ -1,7 +1,12 @@
 apiVersion: cluster.open-cluster-management.io/v1beta2
+kind: ManagedClusterSet
+metadata:
+  name: default
+---
+apiVersion: cluster.open-cluster-management.io/v1beta2
 kind: ManagedClusterSetBinding
 metadata:
-    name: default
-    namespace: rhacm-hub
+  name: default
+  namespace: rhacm-hub
 spec:
-    clusterSet: default
+  clusterSet: default
