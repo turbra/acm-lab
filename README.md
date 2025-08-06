@@ -87,7 +87,7 @@ spec:
   generators:
   - git:
       repoURL: https://github.com/turbra/acm-lab.git
-      revision: main
+      revision: lab
       directories:
       - path: clusters/live/lab/*
   template:
@@ -99,7 +99,7 @@ spec:
       project: default
       source:
         repoURL: https://github.com/turbra/acm-lab.git
-        targetRevision: main
+        targetRevision: lab
         path: '{{.path.path}}'
       destination:
         server: https://kubernetes.default.svc
