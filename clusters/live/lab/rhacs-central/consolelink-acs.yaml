@@ -7,6 +7,6 @@ spec:
     imageURL: >-
       https://console-openshift-console.apps.virt-box.shoresy.net/static/assets/public/imgs/logos/redhat.svg
     section: OpenShift ACS
-  href: 'https://central-stackrox.apps.virt-box.turbra.lab'
+  href: 'https://central-stackrox.apps.virt-box.shoresy.net'
   location: ApplicationMenu
   text: Advanced Cluster Security
