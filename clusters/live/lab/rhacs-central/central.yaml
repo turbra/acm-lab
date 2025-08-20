@@ -89,9 +89,7 @@ spec:
         persistentVolumeClaim:
           claimName: scanner-v4-db
   scanner:
-    analyzer:
-      scaling:
-        replicas: 0
+    disable: true
    #   resources:
    #     limits:
    #       cpu: 500m
@@ -109,6 +107,7 @@ spec:
         #maxReplicas: 3
         #minReplicas: 1
       #  replicas: 0
+
 
 
 
