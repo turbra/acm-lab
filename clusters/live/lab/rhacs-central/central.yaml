@@ -90,6 +90,8 @@ spec:
           claimName: scanner-v4-db
   scanner:
     disable: true
+    analyzer:
+      replicas: 0
    #   resources:
    #     limits:
    #       cpu: 500m
@@ -107,6 +109,7 @@ spec:
         #maxReplicas: 3
         #minReplicas: 1
       #  replicas: 0
+
 
 
 
