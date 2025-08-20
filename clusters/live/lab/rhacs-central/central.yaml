@@ -64,10 +64,10 @@ spec:
     db:
       resources:
         limits:
-          cpu: "1"
-          memory: 2Gi
+          cpu: "500m"
+          memory: 1Gi
         requests:
-          cpu: 500m
+          cpu: 100m
           memory: 256Mi
       #nodeSelector:
       #  node-role.kubernetes.io/infra: ""
@@ -95,5 +95,6 @@ spec:
         autoScaling: Disabled
         #maxReplicas: 3
         #minReplicas: 1
-        replicas: 1
+        replicas: 0
+
 
