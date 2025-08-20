@@ -69,6 +69,17 @@ spec:
         requests:
           cpu: 100m
           memory: 256Mi
+    indexer:
+      scaling:
+        autoScaling: Disabled
+        replicas: 1
+      resources:
+        limits:
+          cpu: 500m
+          memory: 512Mi
+        requests:
+          cpu: 200m
+          memory: 256Mi
       #nodeSelector:
       #  node-role.kubernetes.io/infra: ""
       #tolerations:
@@ -97,6 +108,7 @@ spec:
         #maxReplicas: 3
         #minReplicas: 1
       #  replicas: 0
+
 
 
 
