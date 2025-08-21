@@ -89,14 +89,13 @@ spec:
         persistentVolumeClaim:
           claimName: scanner-v4-db
   scanner:
-    disable: true
-   #   resources:
-   #     limits:
-   #       cpu: 500m
-   #       memory: 1Gi
-   #     requests:
-   #       cpu: 100m
-   #       memory: 512Mi
+      resources:
+        limits:
+          cpu: 500m
+          memory: 1Gi
+        requests:
+          cpu: 100m
+          memory: 512Mi
       #nodeSelector:
       #  node-role.kubernetes.io/infra: ""
       #tolerations:
@@ -107,6 +106,7 @@ spec:
         #maxReplicas: 3
         #minReplicas: 1
       #  replicas: 0
+
 
 
 
