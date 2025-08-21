@@ -101,8 +101,9 @@ spec:
         autoScaling: Disabled
         maxReplicas: 3
         minReplicas: 1
-        replicas: 0
+        replicas: 1
     scannerComponent: Enabled
+
 
 
 
