@@ -16,11 +16,11 @@ spec:
   central:
     resources:
       limits:
-        cpu: 200m
-        memory: 1Gi
+        cpu: "200m"
+        memory: "1Gi"
       requests:
-        cpu: 50m
-        memory: 512Mi
+        cpu: "50m"
+        memory: "512Mi"
     #nodeSelector:
     #  node-role.kubernetes.io/infra: ""
     #tolerations:
@@ -65,21 +65,21 @@ spec:
       resources:
         limits:
           cpu: "500m"
-          memory: 1Gi
+          memory: "1Gi"
         requests:
-          cpu: 100m
-          memory: 256Mi
+          cpu: "100m"
+          memory: "256Mi"
     indexer:
       scaling:
         autoScaling: Disabled
         replicas: 1
       resources:
         limits:
-          cpu: 500m
-          memory: 512Mi
+          cpu: "500m"
+          memory: "512Mi"
         requests:
-          cpu: 200m
-          memory: 256Mi
+          cpu: "200m"
+          memory: "256Mi"
       #nodeSelector:
       #  node-role.kubernetes.io/infra: ""
       #tolerations:
@@ -107,6 +107,7 @@ spec:
         #maxReplicas: 3
         #minReplicas: 1
       #  replicas: 0
+
 
 
 
