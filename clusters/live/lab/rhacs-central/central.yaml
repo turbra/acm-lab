@@ -91,21 +91,17 @@ spec:
   scanner:
       resources:
         limits:
-          cpu: 500m
-          memory: 1Gi
+          cpu: "500m"
+          memory: "1Gi"
         requests:
-          cpu: 100m
-          memory: 512Mi
-      #nodeSelector:
-      #  node-role.kubernetes.io/infra: ""
-      #tolerations:
-      #  - key: node-role.kubernetes.io/infra
-      #    effect: NoSchedule
-    #  scaling:
-     #   autoScaling: Disabled
-        #maxReplicas: 3
-        #minReplicas: 1
-      #  replicas: 0
+          cpu: "100m"
+          memory: "512Mi"
+      scaling:
+        autoScaling: Disabled
+        maxReplicas: 3
+        minReplicas: 1
+        replicas: 0
+
 
 
 
