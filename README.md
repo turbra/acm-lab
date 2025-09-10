@@ -109,6 +109,7 @@ spec:
           kind: MutatingWebhookConfiguration
           jsonPointers:
             - /webhooks/0/clientConfig/caBundle
+            - /metadata/labels/app.kubernetes.io~1instance
       syncPolicy:
         automated:
           prune: true
