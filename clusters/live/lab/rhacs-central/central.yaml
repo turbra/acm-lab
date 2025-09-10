@@ -69,6 +69,9 @@ spec:
         requests:
           cpu: "100m"
           memory: "256Mi"
+      persistence:
+        persistentVolumeClaim:
+          claimName: scanner-v4-db
     indexer:
       scaling:
         autoScaling: Disabled
@@ -85,9 +88,6 @@ spec:
       #tolerations:
       #  - key: node-role.kubernetes.io/infra
       #    effect: NoSchedule
-      persistence:
-        persistentVolumeClaim:
-          claimName: scanner-v4-db
   scanner:
     analyzer:
       resources:
@@ -103,6 +103,7 @@ spec:
         minReplicas: 1
         replicas: 1
     scannerComponent: Enabled
+
 
 
 
