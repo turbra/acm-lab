@@ -110,6 +110,10 @@ spec:
           jsonPointers:
             - /webhooks/0/clientConfig/caBundle
             - /metadata/labels/app.kubernetes.io~1instance
+        - group: ""
+          kind: Namespace
+          jqPathExpressions:
+            - '.metadata.annotations."argocd.argoproj.io/tracking-id"'
       syncPolicy:
         automated:
           prune: true
