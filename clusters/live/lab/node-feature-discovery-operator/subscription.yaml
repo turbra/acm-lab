@@ -3,9 +3,12 @@ kind: Subscription
 metadata:
   name: nfd
   namespace: openshift-nfd
+  labels:
+    operators.coreos.com/nfd.openshift-nfd: ""  
 spec:
   channel: stable
   installPlanApproval: Automatic
   name: nfd
   source: redhat-operators
+
   sourceNamespace: openshift-marketplace
