@@ -8,11 +8,11 @@ metadata:
 spec:
   configBundleSecret: config-bundle-secret
   components:
-    - managed: true
+    - managed: false
       kind: clair
     - managed: true
       kind: postgres
-    - managed: true
+    - managed: false
       kind: objectstorage
     - managed: true
       kind: redis
@@ -20,7 +20,7 @@ spec:
       kind: horizontalpodautoscaler
     - managed: true
       kind: route
-    - managed: true
+    - managed: false
       kind: mirror
     - managed: false
       kind: monitoring
@@ -28,5 +28,5 @@ spec:
       kind: tls
     - managed: true
       kind: quay
-    - managed: true
+    - managed: false
       kind: clairpostgres
