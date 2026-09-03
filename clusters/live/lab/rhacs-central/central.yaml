@@ -72,6 +72,7 @@ spec:
       persistence:
         persistentVolumeClaim:
           claimName: scanner-v4-db
+          size: 200Gi
     indexer:
       scaling:
         autoScaling: Disabled
